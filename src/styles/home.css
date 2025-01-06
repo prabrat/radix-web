@@ -1,14 +1,14 @@
 /* Top of Home Page */ 
 .backgroundImage {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .backgroundImage::before {
@@ -115,7 +115,12 @@
   font-weight: 100; 
 }
 
-.curriculumButton {
+.buttons { 
+  gap: 2rem;
+}
+
+.curriculumButton, 
+.formsButton {
   margin-top: 2rem;
   background-color: #fc3aa4;
   color: white;
@@ -126,10 +131,11 @@
   font-weight: 800;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; 
 }
 
-.curriculumButton:hover {
+.curriculumButton:hover, 
+.formsButton:hover {
   background-color: #d4338c;
 }
 
@@ -206,7 +212,6 @@
 }
 
 /* Giving Back Section */ 
-/* Partners/Giving Back Section Container */
 .partners {
   padding: 4rem 2rem;
   background-color: #f8fafc;  /* Light background to differentiate section */

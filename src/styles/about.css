@@ -19,13 +19,18 @@
 
 .aboutBottom {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px; /* Reduced margin for better spacing */
-  padding: 20px; /* Add padding for better text alignment */
-  box-sizing: border-box;
+  height: 90vh; 
+  padding-top: 4rem;
 }
 
+.aboutBottom .left { 
+  flex: 50%; 
+  height: 100%; 
+}
+
+.aboutBottom .right { 
+  flex: 50%; 
+}
 .aboutBottom h1 {
   font-weight: 600; /* Bolder heading for better emphasis */
   font-size: 2.5rem;

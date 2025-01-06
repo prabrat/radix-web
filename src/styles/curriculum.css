@@ -1,0 +1,63 @@
+.curriculum {
+    width: 100%;
+    background-color: white;
+    padding: 4rem 1rem;
+  }
+  
+  .curriculum-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .curriculum-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .curriculum-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon-wrapper {
+    margin-bottom: 1.5rem;
+    height: 6rem;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .icon-literacy {
+    color: #3b82f6;  /* blue */
+  }
+  
+  .icon-creative {
+    color: #f43f5e;  /* rose */
+  }
+  
+  .icon-music {
+    color: #8b5cf6;  /* purple */
+  }
+  
+  .item-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .item-desc {
+    color: #374151;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .curriculum-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }

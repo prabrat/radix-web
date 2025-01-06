@@ -1,0 +1,134 @@
+.forms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
+  .forms-header {
+    margin-bottom: 3rem;
+  }
+  
+  .forms-header h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .adobe-notice {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .adobe-notice p {
+    flex: 1;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .adobe-download img {
+    width: 90px;
+    height: 50px;
+    transition: transform 0.2s ease;
+  }
+  
+  .adobe-download:hover img {
+    transform: scale(1.1);
+  }
+  
+  .forms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-content {
+    flex: 1;
+  }
+  
+  .form-content h2 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .form-download {
+    margin-left: 2rem;
+  }
+  
+  .pdf-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .pdf-link img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .pdf-link:hover img {
+    transform: scale(1.1);
+  }
+  
+  .revision {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .forms-container {
+      padding: 1rem;
+    }
+  
+    .adobe-notice {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .form-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .form-download {
+      margin-left: 0;
+    }
+  }

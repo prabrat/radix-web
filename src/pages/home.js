@@ -89,10 +89,15 @@ function Home() {
             </div>
           ))}
         </div>
-
-        <Link to="/curriculum">
-          <button className="curriculumButton">VIEW OUR CURRICULUM</button>
-        </Link>
+        
+        <div className='buttons'> 
+          <Link to="/curriculum">
+            <button className="curriculumButton">VIEW OUR CURRICULUM</button>
+          </Link>
+          <Link to="/forms">
+            <button className="formsButton">Access Forms</button>
+          </Link>
+        </div> 
       </section>
 
       <section className="reviews">

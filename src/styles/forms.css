@@ -53,6 +53,14 @@
     gap: 1.5rem;
   }
   
+  /* New styles for the link wrapper */
+  .pdf-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: inherit; /* Ensures text color is inherited */
+  }
+  
   .form-item {
     display: flex;
     justify-content: space-between;
@@ -61,15 +69,19 @@
     background-color: #f8f9fa;
     border-radius: 8px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    min-height: 120px;
   }
   
-  .form-item:hover {
+  /* Move hover effect to work with link wrapper */
+  .pdf-link:hover .form-item {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .form-content {
     flex: 1;
+    padding-right: 2rem;
   }
   
   .form-content h2 {
@@ -85,25 +97,17 @@
   }
   
   .form-download {
-    margin-left: 2rem;
-  }
-  
-  .pdf-link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
+    min-width: 60px;
   }
   
-  .pdf-link img {
+  .form-download img {
     width: 40px;
     height: 40px;
     margin-bottom: 0.5rem;
     transition: transform 0.2s ease;
-  }
-  
-  .pdf-link:hover img {
-    transform: scale(1.1);
   }
   
   .revision {
@@ -126,6 +130,13 @@
       flex-direction: column;
       text-align: center;
       gap: 1rem;
+      min-height: auto;
+      padding: 1.5rem;
+    }
+  
+    .form-content {
+      padding-right: 0;
+      margin-bottom: 1rem;
     }
   
     .form-download {

@@ -54,25 +54,25 @@ const forms = () => {
         </div>
       </div>
 
-      <div className="forms-list">
+    <div className="forms-list">
         {formsList.map((form, index) => (
-          <div key={index} className="form-item">
-            <div className="form-content">
-              <h2>{form.title}</h2>
-              <p>{form.description}</p>
+        <a 
+        href={form.pdfPath}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="pdf-link"
+        >
+            <div key={index} className="form-item">
+                <div className="form-content">
+                <h2>{form.title}</h2>
+                <p>{form.description}</p>
+                </div>
+                <div className="form-download">
+                    <img src={pdfIcon} alt="PDF Download" />
+                    <span className="revision">{form.revision}</span>
+                </div>
             </div>
-            <div className="form-download">
-              <a 
-                href={form.pdfPath}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pdf-link"
-              >
-                <img src={pdfIcon} alt="PDF Download" />
-                <span className="revision">{form.revision}</span>
-              </a>
-            </div>
-          </div>
+        </a>
         ))}
       </div>
     </div>

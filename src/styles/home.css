@@ -1,95 +1,379 @@
-.home {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+/* Top of Home Page */ 
+.backgroundImage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.backgroundImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.homeTop {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.homeTop h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.homeTop h2 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contactButton {
+  margin-top: 2rem;
+  background-color: #4fc1ba;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #3da8a1;
+}
+
+/* Programs Section */ 
+.programs {
+  padding: 5rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.programs h2 {
+  text-align: center;
+  color: #1e3a8a;  /* Navy blue color */
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 100;
+}
+
+.allPrograms {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 13rem;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.programImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.programImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item h3 {
+  color: #1e3a8a;  /* Navy blue color */
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 100; 
+}
+
+.curriculumButton {
+  margin-top: 2rem;
+  background-color: #fc3aa4;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.curriculumButton:hover {
+  background-color: #d4338c;
+}
+
+/* Reviews Section */
+.reviews {
+  background-color: #4fc1ba;
+  padding: 4rem 1rem;
+}
+
+.reviewContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviewContent h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.review-slide {
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.reviewText {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.reviewAuthor {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+/* Splide Custom Styles */
+.reviews .splide__arrow {
+  background: transparent;
+  opacity: 1;
+}
+
+.reviews .splide__arrow svg {
+  fill: white;
+  width: 2em;
+  height: 2em;
+}
+
+.reviews .splide__pagination__page {
+  background: #64748b;
+}
+
+.reviews .splide__pagination__page.is-active {
+  background: white;
+  transform: scale(1.4);
+}
+
+@media (max-width: 640px) {
+  .reviewContent h2 {
+    font-size: 2rem;
   }
   
-  .headerContainer {
-    width: auto;
-    margin-left: 50px;
+  .review-slide {
+    padding: 0 1rem;
   }
   
-  .headerContainer h1 {
-    justify-content: center;
-    align-items: center;
-    font-size: 90px;
-    height: 60px;
-    font-weight: 50;
-    color: black;
+  .reviewText {
+    font-size: 1.1rem;
+  }
+}
+
+/* Giving Back Section */ 
+/* Partners/Giving Back Section Container */
+.partners {
+  padding: 4rem 2rem;
+  background-color: #f8fafc;  /* Light background to differentiate section */
+}
+
+.partners h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 3rem;
+}
+
+/* Main content container */
+.partnerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Common styles for drive containers */
+.toyDrive,
+.clothingDrive,
+.crew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 500px;
+}
+
+.toyDrive:hover,
+.clothingDrive:hover, 
+.crew:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styles for drive sections */
+.toyImage,
+.clothingImage, 
+.crewImage {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Text section styles */
+.toyText,
+.clothText, 
+.crewText {
+  text-align: center;
+  padding: 1rem;
+}
+
+.toyText p,
+.clothText p, 
+.crewText p {
+  color: #4b5563;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Sponsor/Crew section */
+.crew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.crew img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .partnerContent {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .headerContainer p {
-    padding: 0;
-    font-size: 40px;
-    font-weight: lighter;
-    color: black;
+  .crew {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 3rem 1rem;
   }
   
-  .headerContainer button {
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    justify-content: center;
-    background-color: #121619;
-    height: 50px;
+  .partners h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .partnerContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .crew {
+    grid-column: span 1;
+  }
+  
+  .toyDrive,
+  .clothingDrive,
+  .crew {
+    padding: 1rem;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .homeTop h1 {
+    font-size: 2.5rem;
+  }
+
+  .homeTop h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .allPrograms {
+    gap: 1.5rem;
+  }
+  
+  .item {
     width: 180px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
   }
   
-  .headerContainer button:hover {
-    background-color: #07090a;
-    cursor: pointer;
-    transition: 0.3s ease-in;
+  .programImage {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .programs h2 {
+    font-size: 2rem;
   }
   
-  @media only screen and (max-width: 650px) {
-    .home {
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .headerContainer {
-      margin-left: 0px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 80%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #121619;
-      color: white;
-    }
-  
-    .headerContainer h1 {
-      font-size: 40px;
-      height: 30px;
-      color: white;
-    }
-  
-    .headerContainer p {
-      font-size: 30px;
-      color: white;
-    }
-  
-    .headerContainer button {
-      background-color: white;
-      color: #121619;
-      margin-bottom: 30px;
-    }
-  
-    .headerContainer button:hover {
-      background-color: rgb(225, 225, 225);
-      color: #121619;
-    }
+  .allPrograms {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
+  
+  .item {
+    width: 220px;
+  }
+  
+  .programImage {
+    width: 220px;
+    height: 220px;
+  }
+}

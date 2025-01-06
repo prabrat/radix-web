@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactImage from '../images/about/about.jpg'
+import ContactImage from '../images/contact/contact.jpg'
 import "../styles/contact.css"
 function contact() {
   return (

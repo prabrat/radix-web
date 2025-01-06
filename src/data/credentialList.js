@@ -15,9 +15,5 @@ export const CredentialList = [
     {
         name: "Child Care and COVID-19 Training", 
         image: COVID
-    }, 
-    { 
-        image: CJIS
     }
-
 ]

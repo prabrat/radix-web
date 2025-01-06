@@ -1,80 +1,121 @@
+/* General contact page */
 .contact {
-    width: 100%;
-    height: 90vh;
-    display: flex;
+  display: flex;
+  height: 90vh; /* Adjust the height as needed */
+}
+
+.contact .leftSide {
+  flex: 50%; /* 50% of the container's width */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../images/about/about.jpg');
+}
+
+.contact .rightSide {
+  flex: 50%; /* 50% of the container's width */
+  padding: 20px; /* Padding for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form title */
+.contact .rightSide h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 30px; /* Add spacing below title */
+  text-align: center; /* Center align the title */
+}
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; /* Limit the form width */
+  gap: 10px; /* Space between form elements */
+}
+
+/* Input fields */
+form input, form textarea {
+  height: 45px;
+  padding: 0 10px;
+  font-size: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input::placeholder, form textarea::placeholder {
+  font-weight: 400;
+  color: #aaa;
+  font-family: "Poppins", sans-serif;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #4fc1ba; /* Highlight color */
+  box-shadow: 0 0 10px rgba(79, 193, 186, 0.3); /* Glow effect */
+}
+
+/* Label */
+form label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Button */
+form button {
+  margin-top: 20px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  background-color: #4fc1ba;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: #fc3aa4; /* Hover color */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column; /* Stack left and right side on smaller screens */
+    padding: 10px;
   }
-  
+
   .contact .leftSide {
-    height: 100%;
-    flex: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    flex: 0 0 200px; /* Make left side smaller */
   }
-  
+
   .contact .rightSide {
-    height: 100%;
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
   }
-  
+
   .contact .rightSide h1 {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-weight: 10;
-    font-size: 50px;
-    margin-left: 30px;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    padding: 30px;
-  }
-  
-  form input {
-    height: 40px;
-    width: 80%;
-    border: none;
-    border-bottom: 1px solid #121619;
-    color: black;
-  }
-  
+
+  form input,
   form textarea {
-    margin-top: 15px;
-    height: 70px;
-    width: 80%;
-    border: none;
-    border-bottom: 1px solid #121619;
-    color: black;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    font-weight: bold;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  form input:focus,
-  textarea:focus {
-    outline: none;
-  }
-  
-  form label {
-    margin-top: 15px;
-    color: grey;
-  }
-  
-  form button {
-    margin-top: 40px;
-    width: 140px;
     height: 40px;
-    border: none;
-    background-color: #121619;
-    color: whitesmoke;
-    font-size: 15px;
-    cursor: pointer;
   }
+}

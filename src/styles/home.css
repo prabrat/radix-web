@@ -116,12 +116,14 @@
 }
 
 .buttons { 
-  gap: 2rem;
+  display: flex; /* Use flexbox for alignment and spacing */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 2rem; /* Space between buttons */
+  margin-top: 2rem; /* Add margin to the container if needed */
 }
 
 .curriculumButton, 
 .formsButton {
-  margin-top: 2rem;
   background-color: #fc3aa4;
   color: white;
   padding: 1rem 2.5rem;
@@ -138,6 +140,7 @@
 .formsButton:hover {
   background-color: #d4338c;
 }
+
 
 /* Reviews Section */
 .reviews {

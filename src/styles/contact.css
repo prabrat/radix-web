@@ -1,26 +1,53 @@
 /* General contact page */
 .contact {
   display: flex;
-  height: 90vh; /* Adjust the height as needed */
+  flex-direction: column; /* Allows stacking for smaller screens */
+  min-height: 100vh; /* Ensures full page height */
   padding-top: 100px;
+  background-color: #f9f9f9; /* Light background for better contrast */
 }
 
+/* Top section */
+.contact .contact-top { 
+  width: 100%; 
+  height: 35vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white; /* Ensure text or logo is visible */
+}
+
+/* Bottom section */
+.contact .contact-bottom {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex: 1; /* Makes the bottom section fill the remaining space */
+}
+
+/* Left side with background image */
 .contact .leftSide {
-  flex: 50%; /* 50% of the container's width */
-  height: 100%;
+  flex: 50%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../images/about/about.jpg');
+  background-image: url('../images/contact/contact.jpg');
+  min-height: 300px; /* Ensures a visible area on smaller screens */
 }
 
+/* Right side with form */
 .contact .rightSide {
-  flex: 50%; /* 50% of the container's width */
-  padding: 20px; /* Padding for spacing */
+  flex: 50%; 
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white; /* Keeps form visually distinct */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Form title */
@@ -28,9 +55,9 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
-  color: #333; /* Darker text for better readability */
-  margin-bottom: 30px; /* Add spacing below title */
-  text-align: center; /* Center align the title */
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 /* Form container */
@@ -38,42 +65,44 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px; /* Limit the form width */
-  gap: 10px; /* Space between form elements */
+  max-width: 600px;
+  gap: 15px;
 }
 
 /* Input fields */
 form input, form textarea {
   height: 45px;
-  padding: 0 10px;
+  padding: 10px;
   font-size: 1rem;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
   border: 1px solid #ccc;
-  margin-bottom: 15px;
   transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+form textarea {
+  height: auto; /* Allows flexible height for textarea */
+  resize: vertical; /* Allows resizing only vertically */
 }
 
 form input::placeholder, form textarea::placeholder {
-  font-weight: 400;
   color: #aaa;
-  font-family: "Poppins", sans-serif;
 }
 
 form input:focus, form textarea:focus {
   outline: none;
-  border-color: #4fc1ba; /* Highlight color */
-  box-shadow: 0 0 10px rgba(79, 193, 186, 0.3); /* Glow effect */
+  border-color: #4fc1ba;
+  box-shadow: 0 0 10px rgba(79, 193, 186, 0.3);
 }
 
-/* Label */
+/* Labels */
 form label {
   font-size: 1rem;
   color: #555;
   font-weight: 500;
-  margin-bottom: 5px;
 }
 
-/* Button */
+/* Submit button */
 form button {
   margin-top: 20px;
   width: 100%;
@@ -84,29 +113,27 @@ form button {
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
-  background-color: #fc3aa4; /* Hover color */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #fc3aa4;
+  transform: translateY(-2px);
 }
 
-/* Mobile responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .contact {
-    flex-direction: column; /* Stack left and right side on smaller screens */
-    padding: 10px;
+  .contact .contact-bottom {
+    flex-direction: column;
   }
 
   .contact .leftSide {
-    flex: 0 0 200px; /* Make left side smaller */
+    flex: 0 0 auto; /* Allow content to shrink */
+    height: 200px; /* Limit height on smaller screens */
   }
 
   .contact .rightSide {
-    width: 100%;
-    max-width: 500px;
     padding: 20px;
   }
 

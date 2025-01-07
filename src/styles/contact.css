@@ -122,6 +122,28 @@ form button:hover {
   transform: translateY(-2px);
 }
 
+/* Add these to your contact.css file */
+
+.recaptcha-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style for disabled submit button */
+button[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Ensure reCAPTCHA is responsive */
+@media screen and (max-width: 400px) {
+  .recaptcha-container {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .contact .contact-bottom {

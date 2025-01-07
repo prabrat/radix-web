@@ -50,11 +50,17 @@
   justify-content: center;
 }
 
+@font-face { 
+  font-family: museo; 
+  src: url(/public/museo-sans-rounded-700.ttf);
+}
+
 /* Links in the Navbar */
 .navbar a {
   color: #f4f4f4;
   text-decoration: none;
   font-weight: bold;
+  font-family: museo;
   margin: 30px;
   position: relative;
   transition: color 0.3s ease, transform 0.2s ease;

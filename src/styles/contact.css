@@ -2,6 +2,7 @@
 .contact {
   display: flex;
   height: 90vh; /* Adjust the height as needed */
+  padding-top: 100px;
 }
 
 .contact .leftSide {

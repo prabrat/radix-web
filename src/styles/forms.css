@@ -1,13 +1,28 @@
 .forms-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-  }
-  
-  .forms-header {
-    margin-bottom: 3rem;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  padding-top: 110px;
+  position: relative;
+}
+
+.forms-top {
+  position: relative; /* Position it relative to the page */
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 50vh; /* Adjust image height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  margin-left: calc(-50vw + 50%); /* Align with the viewport */
+}
+
+.forms-header {
+  margin-bottom: 3rem;
+  padding-top: 50px;
+}
   
   .forms-header h1 {
     color: #333;

@@ -2,11 +2,14 @@ import React from 'react';
 import { CredentialList } from '../data/credentialList';
 import CredItem from '../components/credItem';
 import "../styles/credential.css";
+import CredLogo from "../images/creds/cred.png"
 
 function Creds() {
   return (
     <div className='creds'>
-      <h1 className='credTitle'> Credentials </h1>
+      <div className='credTitle'> 
+        <img src={CredLogo} /> 
+      </div>
       <div className='allCreds'>
         {CredentialList.map((cred, key) => (
           <CredItem

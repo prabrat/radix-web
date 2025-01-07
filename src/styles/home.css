@@ -12,6 +12,17 @@
   padding: 2rem;
 }
 
+@font-face { 
+  font-family: museo; 
+  src: url(/public/museo-sans-rounded-700.ttf);
+}
+
+.header { 
+  font-family: museo;
+  font-weight: 700;
+  font-size: 90px;
+}
+
 .homeTop {
   text-align: center;
   color: white;
@@ -21,14 +32,8 @@
   max-width: 1200px;
 }
 
-.homeTop h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 .homeTop h2 {
+  font-family: museo;
   font-size: 2.5rem;
   font-weight: 100;
   margin-bottom: 1rem;
@@ -42,6 +47,7 @@
   padding: 1rem 2.5rem;
   border: none;
   border-radius: 50px;
+  font-family: museo;
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -55,7 +61,7 @@
 
 /* Programs Section */ 
 .programs {
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   background: white;
   text-align: center;
 }
@@ -63,9 +69,10 @@
 .programs h2 {
   text-align: center;
   color: #36a9e0;  /* Navy blue color */
-  font-size: 2.5rem;
+  font-family: museo;
+  font-size: 70px;
   margin-bottom: 3rem;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .allPrograms {
@@ -104,6 +111,7 @@
   text-align: center;
   margin-top: 1rem;
   font-weight: 100; 
+  font-family: museo;
 }
 
 .buttons { 
@@ -120,6 +128,7 @@
   padding: 1rem 2.5rem;
   border: none;
   border-radius: 50px;
+  font-family: museo;
   font-size: 1.2rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -148,8 +157,9 @@
   color: white;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-family: museo;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 .review-slide {
@@ -159,7 +169,8 @@
 
 .reviewText {
   color: white;
-  font-size: 1.25rem;
+  font-size: 30px;
+  font-weight: 100; 
   line-height: 1.75;
   font-style: italic;
   margin-bottom: 1.5rem;
@@ -207,13 +218,15 @@
 
 /* Giving Back Section */ 
 .partners {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
+  padding-bottom: 100px;
   background-color: #f8fafc;  /* Light background to differentiate section */
 }
 
 .partners h2 {
+  font-family: museo;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 60px;
   color: #1f2937;
   margin-bottom: 3rem;
 }

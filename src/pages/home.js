@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';  // Make sure to import the Splide CSS
 import '../styles/home.css';
-import background from '../images/home/Background.jpg';
+import background from '../images/home/doodle.jpg';
 import infant from '../images/home/infants.png';
 import toddler from '../images/home/toddlers.png';
 import preschool from '../images/home/preschool.png';
 import toyIMG from '../images/home/toy.png'; 
 import clothIMG from '../images/home/cloth.jpg';
 import tempSponsor from '../images/home/tempSponsor.png';
-
-import TestBackground from '../images/home/doodle.jpg'; 
 
 function Home() {
   const programs = [
@@ -68,10 +66,9 @@ function Home() {
 
   return (
     <div>
-      <div className="backgroundImage" style={{ backgroundImage: `url(${TestBackground})` }}>
+      <div className="backgroundImage" style={{ backgroundImage: `url(${background})` }}>
         <div className="homeTop">
-          <h1>Dependable Day Care in</h1>
-          <h1>Sykesville, MD</h1>
+          <div className='header'>LEARN THROUGH PLAY</div>
           <h2>Contact us to learn more about the programs we offer and to schedule a visit!</h2>
           <Link to="/contact">
             <button className="contactButton">SCHEDULE A VISIT</button>

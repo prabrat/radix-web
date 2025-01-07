@@ -4,6 +4,11 @@
   color: #4fc1ba;
 }
 
+@font-face { 
+  font-family: museo; 
+  src: url(/public/museo-sans-rounded-700.ttf);
+}
+
 /* Top Section */
 .footerTop {
   background-color: #1a1a1a; /* Dark background */
@@ -12,6 +17,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  background-size: cover;
+  background-position: 50% 95%; 
+  background-repeat: no-repeat;
 }
 
 .footerTop .leftSide {
@@ -69,9 +77,15 @@
   text-align: right; /* Align info to the right */
 }
 
+.footerTop .info h1 { 
+  font-family: museo;
+  font-size: 30px;
+}
+
 .footerTop .info p {
   margin: 5px 0;
   font-size: 1rem;
+  font-family: museo;
 }
 
 .footerTop .emailLink {
@@ -106,6 +120,7 @@
 /* Bottom Section */
 .footerBottom {
   background-color: #4fc1ba;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;

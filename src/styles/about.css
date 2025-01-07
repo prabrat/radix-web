@@ -8,13 +8,15 @@
 
 .aboutTop {
   width: 100%; /* Make the top section full-width */
-  height: 50vh; /* Adjust image height */
+  height: 40vh; /* Adjust image height */
   display: flex;
   justify-content: center;
   align-items: center; /* Center the content vertically */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #1a1a1a;
+}
+
+.aboutTop img { 
+  padding-top: 60px;
 }
 
 .aboutBottom {

@@ -1,12 +1,15 @@
 import React from 'react';
 import AboutImage from '../images/about/about.jpg';
+import AboutMain from '../images/about/about-main.png'
 import "../styles/about.css";
 import { Link } from 'react-router-dom';
 
 function About() {
   return (
     <div className='about'>
-      <div className='aboutTop' style={{ backgroundImage: `url(${AboutImage})` }}></div> 
+      <div className='aboutTop'>
+        <img src={AboutMain} /> 
+      </div> 
       <div className='aboutBottom'>
         <div className='left' > 
           <img src={AboutImage} className='aboutIMG' /> 

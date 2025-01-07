@@ -35,8 +35,7 @@ function Contact() {
     }
 
     try {
-      // Replace with your form submission logic
-      console.log('Form submitted:', formData);
+      console.log('Thanks for contacting us! We will get in touch with you shortly.', formData);
       
       // Reset form and captcha after successful submission
       setFormData({

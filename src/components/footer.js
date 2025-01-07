@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/footer.css";
 
 import MainLogo from "../images/home/Logo Main.png"
+import MarylandAccredidation from "../images/home/MDA.png"
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 /* 
@@ -16,6 +17,7 @@ function Footer() {
       {/* Top Section */}
       <div className="footerTop">
         <div className='leftSide'> 
+          <img src={MarylandAccredidation} alt='Accredidation Image'/> 
           <div className='pageLinks'> 
             <Link to="/about">About</Link>
             <Link to="/credentials">Resources</Link>

@@ -18,13 +18,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align to the left */
-  gap: 10px; /* Add gap between links and logo */
+  gap: 25px;
+}
+
+.footerTop .leftSide img { 
+  height: 100px; 
+  width: 320px;
 }
 
 .footerTop .pageLinks {
   display: flex;
   justify-content: flex-start;
   gap: 15px;
+  padding-left: 60px;
 }
 
 .footerTop .pageLinks a {
@@ -51,6 +57,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-right: 95px;
 }
 
 .footerTop .logo img {

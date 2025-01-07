@@ -11,6 +11,8 @@ import toyIMG from '../images/home/toy.png';
 import clothIMG from '../images/home/cloth.jpg';
 import tempSponsor from '../images/home/tempSponsor.png';
 
+import TestBackground from '../images/home/doodle.jpg'; 
+
 function Home() {
   const programs = [
     {
@@ -66,7 +68,7 @@ function Home() {
 
   return (
     <div>
-      <div className="backgroundImage" style={{ backgroundImage: `url(${background})` }}>
+      <div className="backgroundImage" style={{ backgroundImage: `url(${TestBackground})` }}>
         <div className="homeTop">
           <h1>Dependable Day Care in</h1>
           <h1>Sykesville, MD</h1>

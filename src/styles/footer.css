@@ -6,7 +6,7 @@
 
 /* Top Section */
 .footerTop {
-  background-color: #121619; /* Dark background */
+  background-color: #1a1a1a; /* Dark background */
   color: #4fc1ba;
   display: flex;
   justify-content: space-between;
@@ -82,7 +82,7 @@
   display: inline-block;
   margin-top: 10px;
   background-color: #4fc1ba;
-  color: #121619;
+  color: #1a1a1a;
   padding: 8px 16px;
   text-decoration: none;
   font-weight: bold;
@@ -91,7 +91,7 @@
 }
 
 .footerTop .contactLink:hover {
-  background-color: #121619;
+  background-color: #1a1a1a;
   color: #fc3aa4;
   border: 1px solid #fc3aa4;
 }
@@ -120,7 +120,7 @@
 .footerBottom .socialMedia svg {
   font-size: 1.5rem;
   cursor: pointer;
-  color: #121619; /* Match text color */
+  color: #1a1a1a; /* Match text color */
   transition: transform 0.2s ease, color 0.2s ease;
 }
 

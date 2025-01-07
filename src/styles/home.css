@@ -1,24 +1,15 @@
 /* Top of Home Page */ 
 .backgroundImage {
   position: relative;
-  min-height: 80vh;
+  min-height: 92vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-}
-
-.backgroundImage::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .homeTop {
@@ -71,7 +62,7 @@
 
 .programs h2 {
   text-align: center;
-  color: #1e3a8a;  /* Navy blue color */
+  color: #36a9e0;  /* Navy blue color */
   font-size: 2.5rem;
   margin-bottom: 3rem;
   font-weight: 100;
@@ -108,7 +99,7 @@
 }
 
 .item h3 {
-  color: #1e3a8a;  /* Navy blue color */
+  color: #36a9e0;  
   font-size: 1.5rem;
   text-align: center;
   margin-top: 1rem;
@@ -124,7 +115,7 @@
 
 .curriculumButton, 
 .formsButton {
-  background-color: #fc3aa4;
+  background-color: #e15aac;
   color: white;
   padding: 1rem 2.5rem;
   border: none;

@@ -1,7 +1,41 @@
 /* General Footer Styles */
 .footer {
   font-family: 'Poppins', sans-serif;
-  color: #4fc1ba;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+}
+
+/* Footer Top Section */
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #e15aac;
+  padding-left: 30px;
+}
+
+/* Logo on the left */
+.footerLogo img {
+  width: 200px;
+  height: auto;
+}
+
+/* Content aligned to the right */
+.footerContent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 100px;
+  flex-grow: 1;
+}
+
+.MDA img { 
+  width: 300px;
+}
+.footerColumn {
+  text-align: right; 
 }
 
 @font-face { 
@@ -9,146 +43,67 @@
   src: url(/public/museo-sans-rounded-700.ttf);
 }
 
-/* Top Section */
-.footerTop {
-  background-color: #1a1a1a; /* Dark background */
-  color: #4fc1ba;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-size: cover;
-  background-position: 50% 95%; 
-  background-repeat: no-repeat;
+.footerColumn h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: museo;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
-.footerTop .leftSide {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to the left */
-  gap: 25px;
+.footerColumn a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footerTop .leftSide img { 
-  height: 100px; 
-  width: 320px;
+.footerColumn a:hover {
+  color: #e15aac;
 }
 
-.footerTop .pageLinks {
-  display: flex;
-  justify-content: flex-start;
-  gap: 15px;
-  padding-left: 60px;
+.footerColumn p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
-.footerTop .pageLinks a {
-  color: #4fc1ba;
+.emailLink {
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.footerTop a:hover { 
-  color: #fc3aa4;
+.emailLink:hover {
+  color: #e15aac;
 }
 
-.footerTop .pageLinks a::after {
-  content: '|'; /* Add vertical bar separator */
-  margin-left: 10px;
-}
-
-.footerTop .pageLinks a:last-child::after {
-  content: ''; /* Remove separator for the last link */
-}
-
-.footerTop .logo { 
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-right: 95px;
-}
-
-.footerTop .logo img {
-  width: 150px;
-  height: auto;
-}
-
-.footerTop .info {
-  text-align: right; /* Align info to the right */
-}
-
-.footerTop .info h1 { 
-  font-family: museo;
-  font-size: 30px;
-}
-
-.footerTop .info p {
-  margin: 5px 0;
-  font-size: 1rem;
-  font-family: museo;
-}
-
-.footerTop .emailLink {
-  color: #4fc1ba;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.footerTop .emailLink:hover {
-  color: #fc3aa4;
-}
-
-.footerTop .contactLink {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #4fc1ba;
-  color: #1a1a1a;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.footerTop .contactLink:hover {
-  background-color: #1a1a1a;
-  color: #fc3aa4;
-  border: 1px solid #fc3aa4;
-}
-
-/* Bottom Section */
+/* Footer Bottom Section */
 .footerBottom {
-  background-color: #4fc1ba;
-  background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  color: #121619; /* Dark text */
+  margin-top: 20px;
+  padding-top: 10px;
+  color: #ffffff;
 }
 
 .footerBottom .copyright {
-  font-size: 1.2rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  padding-left: 39.4%;
+  font-size: 0.9rem;
 }
 
-.footerBottom .socialMedia {
-  display: flex;
-  gap: 15px;
-}
-
-.footerBottom .socialMedia svg {
+.footerBottom .socialMedia a {
+  color: #ffffff;
   font-size: 1.5rem;
-  cursor: pointer;
-  color: #1a1a1a; /* Match text color */
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footerBottom .socialMedia svg:hover {
+.footerBottom .socialMedia a:hover {
   transform: scale(1.2);
-  color: #ffffff; /* White on hover */
+  color: #e15aac;
 }
 
 /* Responsive Design */
@@ -156,20 +111,25 @@
   .footerTop {
     flex-direction: column;
     align-items: center;
+  }
+
+  .footerLogo {
+    margin-bottom: 20px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 20px;
   }
 
-  .footerTop .leftSide {
-    align-items: center; /* Center align left side elements on mobile */
-  }
-
-  .footerTop .info {
+  .footerColumn {
     text-align: center;
   }
 
   .footerBottom {
     flex-direction: column;
-    align-items: center;
     text-align: center;
     gap: 10px;
   }

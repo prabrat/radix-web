@@ -11,7 +11,7 @@
   position: relative; /* Position it relative to the page */
   left: 0;
   width: 100vw; /* Full viewport width */
-  height: 50vh; /* Adjust image height */
+  height: 30vh; /* Adjust image height */
   display: flex;
   justify-content: center;
   align-items: center;

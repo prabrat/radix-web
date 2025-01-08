@@ -12,6 +12,7 @@ import About from "./pages/about"
 import Contact from "./pages/contact"
 import Curriculum from "./pages/curriculum"
 import Forms from "./pages/forms"
+import ExpenseStatement from "./pages/expense-statement"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact" exact Component={Contact}/> 
           <Route path="/curriculum" exact Component={Curriculum}/>  
           <Route path="/forms" exact Component={Forms}/> 
+          <Route path="/expense-statement" exact Component={ExpenseStatement}/>
         </Routes>
         <Footer /> 
       </Router> 

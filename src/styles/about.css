@@ -30,6 +30,10 @@
   height: 100%; 
 }
 
+.left img { 
+  padding-left: 90px;
+  width: 500px;
+}
 .aboutBottom .right { 
   flex: 50%; 
 }

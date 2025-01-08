@@ -1,63 +1,135 @@
-.curriculum {
-    width: 100%;
-    background-color: white;
-    padding: 4rem 1rem;
+
+.main {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 100px;
+}
+
+.top {
+  position: relative; 
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 30vh; /* Adjust image height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  margin-left: calc(-50vw + 50%); /* Align with the viewport */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Bottom section styles */
+.bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.bottom h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.bottom > p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.day-item {
+  display: flex;
+  gap: 4rem; /* Increased gap between horizontal elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  align-items: center;
+}
+
+.day-item img { 
+  height: 300px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.horizontal { 
+  color: #1a1a1a;
+  padding: 3rem;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.day-item:hover {
+  transform: translateY(-2px);
+}
+
+.activity {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.day-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* End section styles */
+.end {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.end h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.contactButton {
+  background-color: #D13434;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contactButton:hover {
+  background-color: #B82D2D;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bottom {
+      padding: 2rem 1rem;
   }
   
-  .curriculum-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+  .day-item {
+      padding: 2rem;
   }
   
-  .curriculum-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease;
+  .activity {
+      font-size: 1.75rem;
   }
   
-  .curriculum-item:hover {
-    transform: translateY(-5px);
+  .title {
+      font-size: 2rem;
   }
-  
-  .icon-wrapper {
-    margin-bottom: 1.5rem;
-    height: 6rem;
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  .icon-literacy {
-    color: #3b82f6;  /* blue */
-  }
-  
-  .icon-creative {
-    color: #f43f5e;  /* rose */
-  }
-  
-  .icon-music {
-    color: #8b5cf6;  /* purple */
-  }
-  
-  .item-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .item-desc {
-    color: #374151;
-    line-height: 1.6;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .curriculum-container {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-  }
+}

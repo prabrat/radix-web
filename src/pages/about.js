@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutImage from '../images/about/about.jpg';
+import AboutImage from '../images/about/About-Picture.png';
 import AboutMain from '../images/about/about-main.png'
 import "../styles/about.css";
 import { Link } from 'react-router-dom';

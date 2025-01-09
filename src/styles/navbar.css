@@ -28,7 +28,7 @@
 
 /* Hidden Links (Initially Hidden on Small Screens) */
 .navbar .hiddenLinks {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 15px;
 }
@@ -97,6 +97,48 @@
 .navbar .rightSide svg {
   font-size: 60px;
   transition: transform 0.3s ease, color 0.2s ease;
+}
+
+/* Style the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  width: 280px;
+  height: 60px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show dropdown when the parent (link) is hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Style for dropdown links */
+.dropdown-content a {
+  color: #f4f4f4;
+  text-decoration: none;
+  display: block;
+}
+
+/* For mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .dropdown-content a {
+    padding-left: 30px;
+  }
 }
 
 /* Responsive Design for Small Screens */

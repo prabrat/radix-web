@@ -24,9 +24,9 @@ function Footer() {
           </div>
           <div className="footerColumn">
             <h2>Parent Resources</h2>
-            <Link to="/curriculum">Our Curriculum</Link>
+            <Link to="/about/curriculum">Our Curriculum</Link>
             <Link to="/forms">Forms & Policies</Link>
-            <Link to="/expense-statement">Expense Statement</Link>
+            <Link to="/forms/expense-statement">Expense Statement</Link>
           </div>
 
           <div className="footerColumn">

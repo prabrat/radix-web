@@ -4,6 +4,10 @@ import "../styles/curriculum.css"
 
 import title from '../images/curriculum/curriculum-title.png'
 import activity from '../images/curriculum/activity.jpg'
+import morning from '../images/curriculum/morning.png'
+import meal from '../images/curriculum/meal.png'
+import nap from '../images/curriculum/nap.png'
+import art from '../images/curriculum/art.png'
 
 function curriculum() {
   return (
@@ -33,11 +37,11 @@ function curriculum() {
               play. Their morning concludes with a nutritious lunch, ensuring a well-rounded and fulfilling experience.
             </p>
           </div>
-          <img src={activity}/>
+          <img src={morning}/>
         </div>
 
         <div className='day-item'> 
-          <img src={activity}/>
+          <img src={nap}/>
           <div className='horizontal'>
             <div className='activity'>Nap Time</div>
             <p>
@@ -60,11 +64,11 @@ function curriculum() {
               two at least two times a day. Water is available anytime throughout the day.
             </p>
           </div>
-          <img src={activity}/>
+          <img src={meal}/>
         </div>
 
         <div className='day-item'>
-          <img src={activity}/>
+          <img src={art}/>
           <div className='horizontal'> 
             <div className='activity'>Art</div>
             <p>
@@ -77,7 +81,7 @@ function curriculum() {
         </div>
 
         <div className='end'>
-          <h2>We invite you visit Radix and learn all about us in person</h2>
+          <h2>We encourage you to visit Radix and learn all about our program in person!</h2>
           <Link to="/contact">
             <button className="contactButton">SCHEDULE A VISIT</button>
           </Link>

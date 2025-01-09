@@ -24,9 +24,9 @@ function App() {
           <Route path="/credentials" exact Component={Creds}/> 
           <Route path="/about" exact Component={About}/> 
           <Route path="/contact" exact Component={Contact}/> 
-          <Route path="/curriculum" exact Component={Curriculum}/>  
+          <Route path="/about/curriculum" exact Component={Curriculum}/>  
           <Route path="/forms" exact Component={Forms}/> 
-          <Route path="/expense-statement" exact Component={ExpenseStatement}/>
+          <Route path="/forms/expense-statement" exact Component={ExpenseStatement}/>
         </Routes>
         <Footer /> 
       </Router> 

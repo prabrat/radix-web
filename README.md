@@ -1,2 +1,3 @@
-Website for Radix Childcare 
-** Work in Progress ** 
+Website for Radix Childcare ©2024 | All Rights Reserved
+
+** Website Work in Progress ** 

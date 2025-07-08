@@ -33,15 +33,15 @@ function Home() {
   const reviews = [
     {
       id: 1,
-      text: "The teachers are SO very knowledgeable. My children surprise me at home every day with new things they can do. When I have questions about developmental appropriateness for what I need to do to support my children's growth, they are courteous and knowledgeable about how I can help at home with their development."
+      text: "I really loved having my children with Ms. Bhavna of Radix Childcare in Eldersburg, MD. We realized that my daughter would benefit from a daycare for socialization and physical development and luckily found Ms. Bhavna. She has been a great help with getting her caught up and prepared for school. My second child has also benefited from socialization, learning routines, and preparing for school. Ms. Bhavna is very patient, kind, and nurturing with the children under her care. I would highly recommend her daycare."
     },
     {
       id: 2,
-      text: "We couldn't be happier with the care and education our child receives. The staff is incredibly attentive and creates such a warm, nurturing environment. Our little one has grown so much since starting here!"
+      text: "My daughter has been going here for a year now and we couldn't be more happier. This daycare is where you can leave your child and be at ease knowing they are in the right hands and in good care. I would definitely recommend Radix child care for anyone looking for child care."
     },
     {
       id: 3,
-      text: "The curriculum is excellent and the teachers truly care about each child's development. We've seen remarkable progress in our daughter's social skills and early learning fundamentals."
+      text: "We have been pleased with the care provided, the healthy foods given, and the developmental aspect for a home daycare. It has been a great atmosphere and has really kick started my daughter to be able to thrive in preschool!!"
     },
   ];
 

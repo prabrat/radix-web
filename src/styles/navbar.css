@@ -3,16 +3,14 @@
   width: 100%;
   height: 100px;
   background-size: cover;
-  background-color: #1a1a1a; /* Dark neutral background */
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: row;
-  position: fixed; /* Make the navbar fixed */
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 10; /* Ensure it appears above other content */
+  position: fixed;
+  top: 0;
+  z-index: 10;
   padding-bottom: 10px;
 }
-
-/* Left Side - Logo Section */
 .navbar .leftSide {
   flex: 50%;
   height: 100%;
@@ -21,27 +19,21 @@
   padding-left: 70px;
   position: relative;
 }
-
 .navbar .leftSide img {
   width: 150px;
 }
-
 /* Hidden Links (Initially Hidden on Small Screens) */
 .navbar .hiddenLinks {
   display: none;
   flex-direction: column;
   gap: 15px;
 }
-
-.navbar .leftSide.open .hiddenLinks {
+.navbar .rightSide.open .hiddenLinks {
   display: flex;
 }
-
-.navbar .leftSide.close .hiddenLinks {
+.navbar .rightSide.close .hiddenLinks {
   display: none;
 }
-
-/* Right Side - Links and Menu Button */
 .navbar .rightSide {
   flex: 50%;
   height: 100%;
@@ -49,12 +41,10 @@
   align-items: center;
   justify-content: center;
 }
-
-@font-face { 
-  font-family: museo; 
+@font-face {
+  font-family: museo;
   src: url(/public/museo-sans-rounded-700.ttf);
 }
-
 /* Links in the Navbar */
 .navbar a {
   color: #f4f4f4;
@@ -65,14 +55,10 @@
   position: relative;
   transition: color 0.3s ease, transform 0.2s ease;
 }
-
-/* Hover Effects for Links */
 .navbar a:hover {
   color: #fc3aa4;
   transform: scale(1.1);
 }
-
-/* Active Page Underline */
 .navbar a.active::after {
   content: "";
   position: absolute;
@@ -85,27 +71,22 @@
   background: url('../images/home/pencil.png') no-repeat center;
   background-size: contain;
 }
-
 /* Menu Button */
 .navbar .rightSide button {
   background-color: transparent;
   border: none;
   color: #f4f4f4;
   cursor: pointer;
+  display: none;
 }
-
 .navbar .rightSide svg {
   font-size: 60px;
   transition: transform 0.3s ease, color 0.2s ease;
 }
-
-/* Style the dropdown container */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
-/* Initially hide the dropdown content */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -115,75 +96,65 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
-/* Show dropdown when the parent (link) is hovered */
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Optional: Style for dropdown links */
 .dropdown-content a {
   color: #f4f4f4;
-  text-decoration: none;
   display: block;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  background-color: #1a1a1a;
 }
-
-/* For mobile responsiveness */
-@media screen and (max-width: 768px) {
+@media (max-width: 767px) {
+  .navbar .leftSide {
+    padding: 0.5rem 0;
+  }
+  .navbar .rightSide {
+    position: relative;
+  }
+  .navbar .hiddenLinks {
+    position: fixed; 
+    top: 100px; 
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .hiddenLinks a {
+    display: block !important; /* Might update semantics later to not use !important */ 
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar .rightSide > a,
+  .navbar .rightSide > .dropdown {
+    display: none;
+  }
+  .navbar .rightSide button {
+    display: inherit;
+    padding-top: 1rem;
+  }
   .dropdown-content {
     position: static;
     box-shadow: none;
     background-color: transparent;
   }
-  
   .dropdown-content a {
-    padding-left: 30px;
+    color: #f4f4f4;
+    display: block;
+    text-align: center;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    background-color: #282727;
   }
-}
-
-/* Responsive Design for Small Screens */
-@media only screen and (max-width: 900px) {
-  .navbar .rightSide a {
-      width: 70px;
+  .navbar .rightSide.open .hiddenLinks {
+    display: flex;
   }
-  .navbar .leftSide {
-      padding-left: 50px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  /* Hide all links initially on mobile */
-  .navbar .rightSide a {
-      display: none;
-  }
-
-  /* Adjust right side for mobile view */
-  .navbar .rightSide {
-      justify-content: flex-end;
-      padding-right: 50px;
-  }
-
-  .navbar .rightSide button {
-      display: inherit;
-  }
-
-  .navbar .leftSide {
-      flex-direction: column;
-      padding-left: 20px;
-  }
-
-  /* Make sure the hiddenLinks are visible when open */
-  .navbar .leftSide.open .hiddenLinks {
-      display: flex;
-  }
-
-  .navbar .leftSide.close .hiddenLinks {
-      display: none;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .navbar .rightSide button {
-      display: none;
+  .navbar .rightSide.close .hiddenLinks {
+    display: none;
   }
 }

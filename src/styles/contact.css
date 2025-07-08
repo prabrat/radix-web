@@ -1,13 +1,11 @@
-/* General contact page */
 .contact {
   display: flex;
-  flex-direction: column; /* Allows stacking for smaller screens */
-  min-height: 100vh; /* Ensures full page height */
+  flex-direction: column; 
+  min-height: 100vh; 
   padding-top: 100px;
-  background-color: #f9f9f9; /* Light background for better contrast */
+  background-color: #f9f9f9; 
 }
 
-/* Top section */
 .contact .contact-top { 
   width: 100%; 
   height: 45vh; 
@@ -15,30 +13,27 @@
   justify-content: center;
   align-items: center;
   background-color: #1a1a1a;
-  color: white; /* Ensure text or logo is visible */
+  color: white; 
 }
 
-/* Bottom section */
 .contact .contact-bottom {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: white;
   display: flex;
   flex-direction: row;
-  flex: 1; /* Makes the bottom section fill the remaining space */
+  flex: 1; 
 }
 
-/* Left side with background image */
 .contact .leftSide {
   flex: 50%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../images/contact/contact.jpg');
-  min-height: 300px; /* Ensures a visible area on smaller screens */
+  min-height: 300px;
 }
 
-/* Right side with form */
 .contact .rightSide {
   flex: 50%; 
   padding: 40px;
@@ -46,11 +41,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white; /* Keeps form visually distinct */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: white; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
-/* Form title */
 .contact .rightSide h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -60,7 +54,6 @@
   text-align: center;
 }
 
-/* Form container */
 form {
   display: flex;
   flex-direction: column;
@@ -69,7 +62,6 @@ form {
   gap: 15px;
 }
 
-/* Input fields */
 form input, form textarea {
   height: 45px;
   padding: 10px;
@@ -81,8 +73,8 @@ form input, form textarea {
 }
 
 form textarea {
-  height: auto; /* Allows flexible height for textarea */
-  resize: vertical; /* Allows resizing only vertically */
+  height: auto; 
+  resize: vertical; 
 }
 
 form input::placeholder, form textarea::placeholder {
@@ -95,14 +87,12 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0 10px rgba(79, 193, 186, 0.3);
 }
 
-/* Labels */
 form label {
   font-size: 1rem;
   color: #555;
   font-weight: 500;
 }
 
-/* Submit button */
 form button {
   margin-top: 20px;
   width: 100%;
@@ -122,21 +112,17 @@ form button:hover {
   transform: translateY(-2px);
 }
 
-/* Add these to your contact.css file */
-
 .recaptcha-container {
   margin: 20px 0;
   display: flex;
   justify-content: center;
 }
 
-/* Style for disabled submit button */
 button[type="submit"]:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
 
-/* Ensure reCAPTCHA is responsive */
 @media screen and (max-width: 400px) {
   .recaptcha-container {
     transform: scale(0.9);
@@ -144,15 +130,23 @@ button[type="submit"]:disabled {
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .contact .contact-top { 
+    height: 22vh;
+  }
+
+  .contact .contact-top img { 
+    width: 100%;
+    max-width: fit-content;
+  }
+
   .contact .contact-bottom {
     flex-direction: column;
   }
 
   .contact .leftSide {
-    flex: 0 0 auto; /* Allow content to shrink */
-    height: 200px; /* Limit height on smaller screens */
+    flex: 0 0 auto; 
+    height: 200px; 
   }
 
   .contact .rightSide {

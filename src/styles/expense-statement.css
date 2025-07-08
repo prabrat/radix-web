@@ -1,7 +1,5 @@
 /* Base container styles */
 .expense {
-    max-width: 1200px;
-    margin: 0 auto;
     background-color: #ffffff;
     padding: 60px 0;
     display: flex;
@@ -14,12 +12,8 @@
     src: url(/public/museo-sans-rounded-700.ttf);
 }
 
-/* Top section styles - Modified to span full width */
 .expenseTop {
     width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    position: relative;
     background-color: #1a1a1a;
     padding: 3rem 0;
     text-align: center;
@@ -27,7 +21,6 @@
     margin-bottom: 2rem;
 }
 
-/* Container for top content to maintain max-width */
 .expenseTopContent {
     max-width: 1200px;
     margin: 0 auto;
@@ -62,7 +55,6 @@
     font-size: 18px;
 }
 
-/* Form styles */
 .expenseForm {
     width: 100%;
     max-width: 800px;
@@ -73,7 +65,7 @@
     padding: 5rem 7rem;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin: 1rem 2rem; /* Added horizontal margin */
+    margin: 1rem 2rem; 
     margin-bottom: 5rem;
 }
 
@@ -87,7 +79,7 @@
 
 .formRow {
     display: flex;
-    gap: 4rem; /* Increased gap between horizontal elements */
+    gap: 4rem; 
 }
 
 .formGroup {
@@ -98,25 +90,23 @@
     margin-bottom: 1.5rem;
 }
 
-/* Labels */
 .formGroup label {
     color: #4A4A4A;
     font-weight: 500;
     font-size: 1.1rem;
     font-family: 'Museo', sans-serif;
-    margin-bottom: 0.2rem; /* Added space below labels */
+    margin-bottom: 0.2rem;
 }
 
-/* Required field indicator */
 label[for*="required"]::after,
 label[for="child-name"]::after,
 label[for="parent-name"]::after,
+label[for="phone"]::after,
 label[for="email"]::after {
     content: " *";
     color: #FF6B6B;
 }
 
-/* Input fields */
 .formGroup input,
 .formGroup select,
 .formGroup textarea {
@@ -128,7 +118,7 @@ label[for="email"]::after {
     width: 100%;
     height: 1px;
     transition: all 0.2s ease;
-    margin-bottom: 1rem; /* Added space below inputs */
+    margin-bottom: 1rem;
 }
 
 .formGroup input:focus,
@@ -140,15 +130,13 @@ label[for="email"]::after {
     box-shadow: 0 0 0 3px rgba(140, 198, 209, 0.2);
 }
 
-/* Textarea specific styles */
 textarea {
     min-height: 150px;
     resize: vertical;
 }
 
-/* Date section */
 .date-section {
-    margin-top: 2.5rem; /* Increased margin */
+    margin-top: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -156,10 +144,9 @@ textarea {
     color: #4A4A4A;
     font-size: 1.1rem;
     font-weight: 500;
-    margin-bottom: 1.5rem; /* Increased margin */
+    margin-bottom: 1.5rem;
 }
 
-/* Submit button styles */
 .submitButton {
     background-color: #8CC6D1;
     color: white;
@@ -190,10 +177,15 @@ textarea {
     box-shadow: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .expense {
         padding: 24px 16px;
+    }
+    
+    .expense .expenseTop img { 
+        padding-top: 90px;
+        width: 100%;
+        max-width: fit-content;
     }
     
     .formRow {
@@ -209,9 +201,15 @@ textarea {
     .expenseTitle {
         font-size: 1.75rem;
     }
+
+    .formGroup input,
+    .formGroup select,
+    .formGroup textarea {
+        width: 100%;
+        max-width: fit-content;
+    }
 }
 
-/* Placeholder styles */
 ::placeholder {
     color: #ADB5BD;
     opacity: 1;

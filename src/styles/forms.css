@@ -6,156 +6,148 @@
   padding-top: 110px;
   position: relative;
 }
-
 .forms-top {
-  position: relative; /* Position it relative to the page */
+  position: relative;
   left: 0;
-  width: 100vw; /* Full viewport width */
-  height: 30vh; /* Adjust image height */
+  width: 100vw;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #1a1a1a;
-  margin-left: calc(-50vw + 50%); /* Align with the viewport */
+  margin-left: calc(-50vw + 50%);
 }
-
 .forms-header {
   margin-bottom: 3rem;
   padding-top: 50px;
 }
-  
-  .forms-header h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.forms-header h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-info {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.adobe-notice {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.adobe-notice p {
+  flex: 1;
+  margin: 0;
+  line-height: 1.5;
+}
+.adobe-download img {
+  width: 90px;
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+.adobe-download:hover img {
+  transform: scale(1.1);
+}
+.forms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.pdf-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: inherit;
+}
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  min-height: 120px;
+}
+.pdf-link:hover .form-item {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.form-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+.form-content h2 {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.form-content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+.form-download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+.form-download img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.revision {
+  font-size: 0.875rem;
+  color: #666;
+}
+@media (max-width: 767px) {
+  .forms-container {
+      padding: 0;
+      width: 100%;
+      max-width: fit-content;
+      align-items: center;
+      padding-bottom: 40px;
+ }
+
+  .forms-top { 
+    width: 100%;
+    background-color: #1a1a1a;
   }
-  
-  .contact-info {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  
+
+  .forms-top img {
+      padding-top: 95px;
+      width: 95%;
+      max-width: fit-content;
+ }
   .adobe-notice {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    width: 100%;
-  }
-  
-  .adobe-notice p {
-    flex: 1;
-    margin: 0;
-    line-height: 1.5;
-  }
-  
-  .adobe-download img {
-    width: 90px;
-    height: 50px;
-    transition: transform 0.2s ease;
-  }
-  
-  .adobe-download:hover img {
-    transform: scale(1.1);
-  }
-  
-  .forms-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  /* New styles for the link wrapper */
-  .pdf-link {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    color: inherit; /* Ensures text color is inherited */
-  }
-  
-  .form-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%;
-    min-height: 120px;
-  }
-  
-  /* Move hover effect to work with link wrapper */
-  .pdf-link:hover .form-item {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-content {
-    flex: 1;
-    padding-right: 2rem;
-  }
-  
-  .form-content h2 {
-    color: #333;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-content p {
-    color: #666;
-    margin: 0;
-    line-height: 1.5;
-  }
-  
-  .form-download {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 60px;
-  }
-  
-  .form-download img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 0.5rem;
-    transition: transform 0.2s ease;
-  }
-  
-  .revision {
-    font-size: 0.875rem;
-    color: #666;
-  }
-  
-  @media (max-width: 768px) {
-    .forms-container {
-      padding: 1rem;
-    }
-  
-    .adobe-notice {
       flex-direction: column;
       text-align: center;
       gap: 1rem;
-    }
-  
-    .form-item {
+      width: 90%;
+ }
+  .form-item {
       flex-direction: column;
       text-align: center;
       gap: 1rem;
       min-height: auto;
       padding: 1.5rem;
-    }
-  
-    .form-content {
+      width: 90%;
+ }
+  .form-content {
       padding-right: 0;
       margin-bottom: 1rem;
-    }
-  
-    .form-download {
+ }
+  .form-download {
       margin-left: 0;
-    }
-  }
+ }
+}

@@ -23,7 +23,6 @@ function ExpenseStatement() {
       return;
     }
 
-    // Form submission logic here
     alert("Request submitted successfully!");
   };
 
@@ -79,6 +78,7 @@ function ExpenseStatement() {
               name="phone"
               id="phone"
               placeholder="Enter Phone Number"
+              required
             />
           </div>
 
@@ -128,7 +128,7 @@ function ExpenseStatement() {
         {/* reCAPTCHA */}
         <div className="formGroup">
           <ReCAPTCHA
-            sitekey="YOUR_RECAPTCHA_SITE_KEY" // Replace with your site key
+            sitekey="YOUR_RECAPTCHA_SITE_KEY" // Replace with site key
             onChange={handleCaptchaChange}
           />
         </div>

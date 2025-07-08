@@ -17,6 +17,7 @@
   src: url(/public/museo-sans-rounded-700.ttf);
 }
 
+/* Learn Through Play Title */
 .header { 
   font-family: museo;
   font-weight: 700;
@@ -32,6 +33,7 @@
   max-width: 1200px;
 }
 
+/* Home Description "Contact us to.." */ 
 .homeTop h2 {
   font-family: museo;
   font-size: 2.5rem;
@@ -69,7 +71,7 @@
 
 .programs h2 {
   text-align: center;
-  color: #36a9e0;  /* Navy blue color */
+  color: #36a9e0; 
   font-family: museo;
   font-size: 70px;
   margin-bottom: 3rem;
@@ -116,10 +118,10 @@
 }
 
 .buttons { 
-  display: flex; /* Use flexbox for alignment and spacing */
-  justify-content: center; /* Center buttons horizontally */
-  gap: 2rem; /* Space between buttons */
-  margin-top: 2rem; /* Add margin to the container if needed */
+  display: flex; 
+  justify-content: center; 
+  gap: 2rem; 
+  margin-top: 2rem; 
 }
 
 .curriculumButton, 
@@ -147,6 +149,7 @@
 .reviews {
   background-color: #4fc1ba;
   padding: 4rem 1rem;
+  height: auto;
 }
 
 .reviewContent {
@@ -174,12 +177,6 @@
   font-weight: 100; 
   line-height: 1.75;
   font-style: italic;
-  margin-bottom: 1.5rem;
-}
-
-.reviewAuthor {
-  color: #cbd5e1;
-  font-size: 1rem;
 }
 
 /* Splide Custom Styles */
@@ -201,20 +198,6 @@
 .reviews .splide__pagination__page.is-active {
   background: white;
   transform: scale(1.4);
-}
-
-@media (max-width: 640px) {
-  .reviewContent h2 {
-    font-size: 2rem;
-  }
-  
-  .review-slide {
-    padding: 0 1rem;
-  }
-  
-  .reviewText {
-    font-size: 1.1rem;
-  }
 }
 
 /* Giving Back Section */ 
@@ -306,17 +289,66 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .partnerContent {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 767px) { 
+
+  /* Added this body to prevent horizontal scrool of emptiness */ 
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .header { 
+    padding-top: 80px;
+    font-size: 50px;
+  }
+
+  .homeTop { 
+    max-width: auto;
+  }
+
+  .homeTop h2 { 
+    font-size: 30px;
+  }
+
+  /* Programs */
+  .programs h2 {
+    font-size: 25px;
   }
   
-  .crew {
-    grid-column: span 2;
+  .allPrograms {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
-}
+  
+  .item {
+    width: 220px;
+  }
+  
+  .programImage {
+    width: 220px;
+    height: 220px;
+  }
 
-@media (max-width: 768px) {
+  .buttons { 
+    flex-direction: column;
+  }
+
+  /* Reviews */ 
+  .reviewContent h2 {
+    font-size: 33px;
+  }
+  
+  .review-slide {
+    padding: 0 1rem;
+  }
+  
+  .reviewText {
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  /* Giving Back Section */
   .partners {
     padding: 3rem 1rem;
   }
@@ -325,26 +357,35 @@
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-}
 
-@media (max-width: 640px) {
   .partnerContent {
-    grid-template-columns: 1fr;
+    display: flex; 
+    flex-direction: row; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem; 
+    padding-bottom: 1rem;
   }
-  
-  .crew {
-    grid-column: span 1;
+
+  .partnerContent::-webkit-scrollbar { 
+    display: none;
   }
   
   .toyDrive,
   .clothingDrive,
   .crew {
-    padding: 1rem;
+    flex-shrink: 0;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    scroll-snap-align: center;
   }
+
 }
 
+/* 
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .homeTop h1 {
     font-size: 2.5rem;
@@ -371,22 +412,6 @@
 }
 
 @media (max-width: 768px) {
-  .programs h2 {
-    font-size: 2rem;
-  }
   
-  .allPrograms {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .item {
-    width: 220px;
-  }
-  
-  .programImage {
-    width: 220px;
-    height: 220px;
-  }
 }
+*/ 

@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 /* Componenets */ 
 import Navbar from "./components/navbar"
 import Footer from "./components/footer"
+import Refresh from "./components/scrollToTop"
 
 /* Pages */ 
 import Home from "./pages/home"
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <Router> 
         <Navbar /> 
+        <Refresh /> 
         <Routes> 
           <Route path="/" exact Component={Home}/> 
           <Route path="/credentials" exact Component={Creds}/> 

@@ -144,8 +144,6 @@
   background-color: #d4338c;
 }
 
-
-/* Reviews Section */
 .reviews {
   background-color: #4fc1ba;
   padding: 4rem 1rem;
@@ -179,7 +177,6 @@
   font-style: italic;
 }
 
-/* Splide Custom Styles */
 .reviews .splide__arrow {
   background: transparent;
   opacity: 1;
@@ -204,7 +201,7 @@
 .partners {
   padding: 1rem 2rem;
   padding-bottom: 100px;
-  background-color: #f8fafc;  /* Light background to differentiate section */
+  background-color: #f8fafc;  
 }
 
 .partners h2 {
@@ -288,10 +285,9 @@
   border-radius: 6px;
 }
 
-/* Responsive Design */
 @media (max-width: 767px) { 
 
-  /* Added this body to prevent horizontal scrool of emptiness */ 
+  /* Added this body to prevent horizontal scrool of doom */ 
   body {
     overflow-x: hidden !important;
   }
@@ -382,36 +378,3 @@
   }
 
 }
-
-/* 
-
-
-@media (max-width: 768px) {
-  .homeTop h1 {
-    font-size: 2.5rem;
-  }
-
-  .homeTop h2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .allPrograms {
-    gap: 1.5rem;
-  }
-  
-  .item {
-    width: 180px;
-  }
-  
-  .programImage {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  
-}
-*/ 

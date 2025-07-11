@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from '@emailjs/browser';
 import ContactImage from '../images/contact/contact.jpg';
 import ContactTitle from '../images/contact/contact-title.png';
 import "../styles/contact.css";
@@ -35,7 +36,20 @@ function Contact() {
     }
 
     try {
-      console.log('Thanks for contacting us! We will get in touch with you shortly.', formData);
+
+      const result = await emailjs.send( 
+        'service_7sq4otb', 
+        'template_vowd50c', 
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message
+        },
+        'JL0hfMolBBdo2tFIW'
+      );
+      console.log(result.text);
+      alert('Thanks for contacting us! We will get in touch with you as soon as possible.')
       
       // Reset form and captcha after successful submission
       setFormData({

@@ -106,7 +106,7 @@ function Contact() {
             <div className="recaptcha-container">
               <ReCAPTCHA
                 ref={recaptchaRef}
-                sitekey="YOUR_RECAPTCHA_SITE_KEY" /* Need to add my key after connecting domaian */
+                sitekey="6LeT3n8rAAAAAKbLZI_H2AzT6Zk87-qQ1MJrAcCn" /* Need to add my key after connecting domaian */
                 onChange={handleCaptchaChange}
               />
             </div>

@@ -9,26 +9,33 @@ const Forms = () => {
     {
       title: 'Emergency Form',
       description: 'This is a State-required document to let our facility know who to contact in the event of an emergency.',
-      pdfPath: '/forms/test-emergency-form.pdf',
-      revision: 'rev 3/23/24',
+      pdfPath: '/forms/emergency-form.pdf',
+      revision: 'rev 7/11/25',
     },
     {
-      title: 'Authorized Pick-Up',
-      description: "Please fill out this form to add someone to your child's emergency card.",
-      pdfPath: '/forms/test-AuthPUFF.pdf',
-      revision: 'rev 3/23/24',
+      title: 'Medication Administration Authorization Form',
+      description: <p>This is a State-required document to let our facility administer any required medication. <strong>ONLY VALID FOR ONE YEAR</strong></p>,
+      pdfPath: '/forms/med-admin.pdf',
+      revision: 'rev 7/11/25',
     },
     {
-      title: 'One Time Pick-Up Form',
-      description: <p>This form is for <strong>ONE-TIME USE ONLY</strong>.</p>,
-      pdfPath: '/forms/test-OneTimePUF.pdf',
-      revision: 'rev 3/23/24',
+      title: 'Allergy and Anaphylaxis - Medication Administration Authorization Plan',
+      description: <p>This is a State-required document to let our facility follow the plan and administer any Allergy and Anaphylaxis Medication. <strong>ONLY VALID FOR ONE YEAR</strong></p>,
+      pdfPath: '/forms/allergy-anaphylaxis.pdf',
+      revision: 'rev 7/11/25',
     },
     {
-      title: 'Contract',
-      description: 'Contact Form',
-      pdfPath: '/forms/test-contract.pdf',
-      revision: 'rev 3/23/24',
+      title: 'Health Inventory Form',
+      description: 'This is a State-required Health Assessment Form.',
+      pdfPath: '/forms/health-form.pdf',
+      revision: 'rev 7/11/25',
+    },
+
+    {
+      title: "Social Media Release Consent Form", 
+      description: 'This is a Social Media Release Form that gives or denies Radix Childcare the consent to post any photos of your child/children on our Social Media Pages.', 
+      pdfPath: '/forms/social-media-release.pdf', 
+      revision: 'rev 7/11/25'
     },
   ];
 

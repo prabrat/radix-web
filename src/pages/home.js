@@ -90,7 +90,7 @@ function Home() {
         </div>
         
         <div className='buttons'> 
-          <Link to="/curriculum">
+          <Link to="/about/curriculum">
             <button className="curriculumButton">VIEW OUR CURRICULUM</button>
           </Link>
           <Link to="/forms">

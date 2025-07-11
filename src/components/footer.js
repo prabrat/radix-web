@@ -40,6 +40,9 @@ function Footer() {
             <p>Sykesville, MD 21784</p>
             <p>Phone: (667) 802-9169</p>
             <p>
+              <a href="mailto:bhavnajain7804@yahoo.com" className="emailLink">
+                Mrs. Bhavna: bhavnajain7804@yahoo.com
+              </a>
               <a href="mailto:support@radixchildcare.com" className="emailLink">
                 support@radixchildcare.com
               </a>

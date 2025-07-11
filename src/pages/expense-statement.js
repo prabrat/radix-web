@@ -128,7 +128,7 @@ function ExpenseStatement() {
         {/* reCAPTCHA */}
         <div className="formGroup">
           <ReCAPTCHA
-            sitekey="YOUR_RECAPTCHA_SITE_KEY" // Replace with site key
+            sitekey="6LeT3n8rAAAAAKbLZI_H2AzT6Zk87-qQ1MJrAcCn" // Replace with site key
             onChange={handleCaptchaChange}
           />
         </div>

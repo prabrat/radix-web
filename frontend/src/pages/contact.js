@@ -37,6 +37,7 @@ function Contact() {
 
     try {
 
+      /* Currently sending it to nishtimishti@gmail.com for testing */
       const result = await emailjs.send( 
         'service_7sq4otb', 
         'template_vowd50c', 

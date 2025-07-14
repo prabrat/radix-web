@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from '@emailjs/browser';
 import "../styles/expense-statement.css";
 import expense from "../images/forms/expense.png"
+import { formControlClasses } from "@mui/material";
 
 function ExpenseStatement() {
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -15,7 +17,7 @@ function ExpenseStatement() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!captchaVerified) {
@@ -23,7 +25,37 @@ function ExpenseStatement() {
       return;
     }
 
-    alert("Request submitted successfully!");
+    const formData = {
+      'child-name': event.target['child-name'].value,
+      'parent-name': event.target['parent-name'].value,
+      'phone': event.target['phone'].value,
+      'email': event.target['email'].value,
+      'from-date': event.target['from-date'].value,
+      'to-date': event.target['to-date'].value,
+      'message': event.target['message'].value,
+    };
+
+    try { 
+      const response = await fetch("/submit-expense", { 
+        method: 'POST', 
+        headers: {'Content-Type': 'application/json'}, 
+        body: JSON.stringify(formData)
+      }); 
+
+      const data = await response.json(); 
+
+      if (response.ok) { 
+        alert(data.message); 
+        event.target.reset(); 
+        setCaptchaVerified(false);
+      } else { 
+        alert(data.error || 'An error occured while submitting. Please try again!'); 
+      }
+
+    } catch(error) { 
+      console.error('Error:', error); 
+      alert('There was an error sending your request. Please try again!');
+    }
   };
 
   return (

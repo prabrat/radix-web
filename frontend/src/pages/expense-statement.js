@@ -36,7 +36,7 @@ function ExpenseStatement() {
     };
 
     try { 
-      const response = await fetch("/submit-expense", { 
+      const response = await fetch("https://radix-web.onrender.com/submit-expense", { 
         method: 'POST', 
         headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify(formData)

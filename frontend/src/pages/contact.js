@@ -37,31 +37,22 @@ function Contact() {
 
     try {
 
-      /* Currently sending it to nishtimishti@gmail.com for testing */
-      const result = await emailjs.send( 
-        'service_7sq4otb', 
-        'template_vowd50c', 
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message
-        },
-        'JL0hfMolBBdo2tFIW'
-      );
-      console.log(result.text);
-      alert('Thanks for contacting us! We will get in touch with you as soon as possible.')
-      
-      // Reset form and captcha after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-      setCaptchaVerified(false);
-      recaptchaRef.current.reset();
-      
+      const response = await fetch("https://radix-web.onrender.com/contact", { 
+        method: 'POST', 
+        headers: {'Content-Type': 'application/json'}, 
+        body: JSON.stringify(formData)
+      }); 
+
+      const data = await response.json(); 
+
+      if (response.ok) { 
+        alert(data.message);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setCaptchaVerified(false);
+        recaptchaRef.current.reset();
+      } else { 
+        alert(data.Error || 'Error submitting the form. Please try again.')
+      }     
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('There was an error submitting the form. Please try again.');

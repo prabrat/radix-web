@@ -24,8 +24,8 @@ def submit_expense():
         """
 
         send_email(
-            subject='New Expense Statement Request',
-            body=email_body
+            subject = 'New Expense Statement Request',
+            body = email_body
         )
 
         return jsonify({'message': 'Expense Statement Request Submitted'}), 200

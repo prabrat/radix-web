@@ -17,6 +17,7 @@ def create_app():
     mail.init_app(app)
 
     app.register_blueprint(expense_bp)
+    app.register_blueprint(contact_bp)
     return app
 
 app = create_app() 

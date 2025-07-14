@@ -60,12 +60,10 @@ function ExpenseStatement() {
 
   return (
     <div className="expense">
-      {/* Top Section with Logo */}
       <div className="expenseTop">
         <img src={expense} />
       </div>
 
-      {/* Information Section */}
       <div className="expenseInfo">
         <p>
           Enter the information below and click on <strong>SUBMIT</strong> to

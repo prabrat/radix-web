@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_cors import CORS 
 from flask_mail import Mail
-from backend.config import Config
+from config import Config
 from dotenv import load_dotenv
-from backend.routes.expense import expense_bp
+from routes.expense import expense_bp
 import os 
 
 load_dotenv()

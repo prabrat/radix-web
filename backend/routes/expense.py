@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from backend.services.mail_service import send_email
+from services.mail_service import send_email
 
 expense_bp = Blueprint("expense", __name__)
 

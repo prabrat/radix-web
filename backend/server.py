@@ -4,6 +4,7 @@ from flask_mail import Mail
 from config import Config
 from dotenv import load_dotenv
 from routes.expense import expense_bp
+from routes.contact import contact_bp
 import os 
 
 load_dotenv()

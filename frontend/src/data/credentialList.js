@@ -1,19 +1,13 @@
-import PreschoolTraining from "../images/creds/Cred 1.jpg"
-import CPR from "../images/creds/Cred 3.png"
-import COVID from "../images/creds/Cred 4.jpg"
-import CJIS from "../images/creds/Cred 2.jpg"
+import Quality from "../images/creds/Maryland Excels Quality Rating 3.jpg"
+import Cred from "../images/creds/Maryland Child Care Credential Level Three.jpg"
 
 export const CredentialList = [
     { 
-        name: "90-hour Pre-service Training", 
-        image: PreschoolTraining
+        name: "Maryland Child Care Credential Level Three", 
+        image: Cred
     }, 
     { 
-        name: "CPR, AED, and First Aid Training", 
-        image: CPR
-    }, 
-    {
-        name: "Child Care and COVID-19 Training", 
-        image: COVID
+        name: "Maryland EXCELS Quality Rating 3", 
+        image: Quality
     }
 ]

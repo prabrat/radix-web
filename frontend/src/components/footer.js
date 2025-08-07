@@ -58,7 +58,7 @@ function Footer() {
         </div>
         <div className="socialMedia">
           <a href="https://www.facebook.com/822HermanWay/" target="_blank" rel="noopener noreferrer">
-            <FacebookIcon />
+            <FacebookIcon fontSize='large'/>
           </a>
         </div>
       </div>

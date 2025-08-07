@@ -147,7 +147,7 @@
 .reviews {
   background-color: #4fc1ba;
   padding: 4rem 1rem;
-  height: auto;
+  height: auto !important;
 }
 
 .reviewContent {

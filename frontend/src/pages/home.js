@@ -43,6 +43,14 @@ function Home() {
       id: 3,
       text: "We have been pleased with the care provided, the healthy foods given, and the developmental aspect for a home daycare. It has been a great atmosphere and has really kick started my daughter to be able to thrive in preschool!!"
     },
+    { 
+      id: 4, 
+      text: "We have been going to Radix Childcare for over 3 years now. Our oldest was getting ready to enter kindergarten and Ms. Bhavna was instrumental in helping her prepare. Our youngest had just turned 1 year old and really blossomed at Radix. Ms. Bhavna is kind, loving and patient with all of her kids. She provides guidance and structure to help kids develop social skills and she has a learning curriculum to prepare them for the next step in their education. I highly recommend Radix Childcare. You won't find a better daycare anywhere in the area!"
+    }, 
+    { 
+      id: 5, 
+      text: "Ms. Bhavna has been very helpful in improving my daughter’s socialization skills. My daughter enjoys coming here every day to play with the other kids, learn, sing and dance, and spend time outside!"
+    }
   ];
 
   const splideOptions = {
@@ -57,6 +65,7 @@ function Home() {
     pauseOnFocus: true,
     gap: '1rem',
     height: 'auto',
+    autoHeight: true,
     breakpoints: {
       640: {
         arrows: false,
@@ -101,7 +110,7 @@ function Home() {
 
       <section className="reviews">
         <div className="reviewContent">
-          <h2>Hear From Our Parents</h2>
+          <h2>Family Feedback</h2>
           <Splide options={splideOptions} className="allReviews">
             {reviews.map((review) => (
               <SplideSlide key={review.id}>
